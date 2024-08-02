@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+ }
+
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+
+@await Component.InvokeAsync("_UILayoutHeadComponent")
+
+  <body>
+    <!--    Main Content-->
+    <main class="main" id="top">
+
+        @await Component.InvokeAsync("_UILayoutNavbarComponent")
+      
+        @RenderBody()
+
+      <!-- <section> footer ============================-->
+        @await Component.InvokeAsync("_UILayoutFooterComponent")
+
+
+      <div class="py-5 text-center">
+        <p class="mb-0 text-secondary fs--1 fw-medium">Tüm Hakları Saklıdır@jadoo.co </p>
+      </div>
+    </main>
+    <!--    JavaScripts-->
+    @await Component.InvokeAsync("_UILayoutScriptComponent")
+  </body>
+
+</html>
