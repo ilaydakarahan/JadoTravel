@@ -12,6 +12,11 @@ namespace JadoTravel.DataAccess.Context
 
         public DbSet<Destination> Destinations { get; set; }
         public DbSet<Service> Services { get; set; }
+        public DbSet<Company> Companies  { get; set; }
+        public DbSet<Feature> Features  { get; set; }
+        public DbSet<Step> Steps  { get; set; }
+        public DbSet<Subscribe> Subscribes  { get; set; }
+        public DbSet<Testimonial> Testimonials  { get; set; }
 
     }
 }
