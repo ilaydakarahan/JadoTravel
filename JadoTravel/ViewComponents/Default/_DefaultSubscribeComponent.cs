@@ -4,7 +4,7 @@ namespace JadoTravel.ViewComponents.Default
 {
     public class _DefaultSubscribeComponent :ViewComponent
     {
-        public async Task<IViewComponentResult> InvokeAsync()
+        public IViewComponentResult Invoke()
         {
             return View();
         }

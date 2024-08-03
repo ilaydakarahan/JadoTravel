@@ -11,6 +11,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\sb-admin\assets\demo\chart-area-demo.js" />
+    <None Include="wwwroot\sb-admin\assets\demo\chart-bar-demo.js" />
+    <None Include="wwwroot\sb-admin\assets\demo\chart-pie-demo.js" />
+    <None Include="wwwroot\sb-admin\assets\demo\datatables-demo.js" />
+    <None Include="wwwroot\sb-admin\assets\img\error-404-monochrome.svg" />
+    <None Include="wwwroot\sb-admin\js\datatables-simple-demo.js" />
+    <None Include="wwwroot\sb-admin\js\scripts.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MediatR" Version="12.3.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.7">
@@ -23,6 +33,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Mediator\Commands\TestimonialCommands\" />
   </ItemGroup>
 
 </Project>

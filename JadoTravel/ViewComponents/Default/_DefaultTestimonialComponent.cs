@@ -1,12 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using JadoTravel.Features.Mediator.Queries.TestimonialQueries;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace JadoTravel.ViewComponents.Default
 {
     public class _DefaultTestimonialComponent : ViewComponent
     {
-        public async Task<IViewComponentResult> InvokeAsync()
+        private readonly IMediator _mediator;
+
+		public _DefaultTestimonialComponent(IMediator mediator)
+		{
+			_mediator = mediator;
+		}
+
+		public async Task<IViewComponentResult> InvokeAsync()
         {
-            return View();
+            var values = await _mediator.Send(new GetTestimonialQuery());
+            return View(values);
         }
     }
 }

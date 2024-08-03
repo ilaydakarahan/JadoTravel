@@ -1,12 +1,24 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using JadoTravel.Features.CQRS.Handlers.DestinationHandlers;
+using JadoTravel.Features.CQRS.Results.DestinationResults;
+using JadoTravel.Features.Mediator.Queries.ServiceQueries;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace JadoTravel.ViewComponents.Default
 {
     public class _DefaultDestinationComponent : ViewComponent
     {
-        public async Task<IViewComponentResult> InvokeAsync()
+		private readonly GetDestinationQueryHandler _getDestinationQueryHandler;
+
+		public _DefaultDestinationComponent(GetDestinationQueryHandler getDestinationQueryHandler)
+		{
+			_getDestinationQueryHandler = getDestinationQueryHandler;
+		}
+
+		public IViewComponentResult Invoke()
         {
-            return View();
-        }
+			var values = _getDestinationQueryHandler.Handle();
+			return View(values);
+		}
     }
 }

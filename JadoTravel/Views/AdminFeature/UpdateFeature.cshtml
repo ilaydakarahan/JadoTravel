@@ -1,0 +1,28 @@
+﻿@model GetFeatureByIdQueryResult
+@{
+    ViewData["Title"] = "UpdateFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="container-fluid px-4">
+    <br />
+<form method="post">
+    <input type="hidden" asp-for="FeatureId" />
+    <h2>Güncelleme Sayfası</h2>
+    <br />
+    <label>Başlık</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <label>Kısa Açıklama</label>
+    <input type="text" asp-for="ShortDescription" class="form-control" />
+    <br />
+    <label>Uzun Açıklama</label>
+    <input type="text" asp-for="LongDescription" class="form-control" />
+    <br />
+    <label>Resim</label>
+    <input type="text" asp-for="ImageUrl" class="form-control" />
+    <br />
+
+        <button class="btn mb-1 btn-rounded btn-info">Güncelle</button>
+</form>
+
+

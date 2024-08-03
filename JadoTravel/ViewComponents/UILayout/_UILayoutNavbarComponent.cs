@@ -4,7 +4,7 @@ namespace JadoTravel.ViewComponents.UILayout
 {
     public class _UILayoutNavbarComponent : ViewComponent
     {
-		public async Task<IViewComponentResult> InvokeAsync()
+		public IViewComponentResult Invoke()
 		{
 			return View();
 		}

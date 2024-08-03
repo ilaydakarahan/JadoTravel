@@ -2,6 +2,8 @@ using JadoTravel.DataAccess.Abstract;
 using JadoTravel.DataAccess.Context;
 using JadoTravel.DataAccess.Repositories;
 using JadoTravel.Features.CQRS.Handlers.DestinationHandlers;
+using JadoTravel.Features.CQRS.Handlers.FeatureHandlers;
+using JadoTravel.Features.CQRS.Handlers.StepHandlers;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +16,12 @@ builder.Services.AddScoped<GetDestinationByIdQueryHandler>();
 builder.Services.AddScoped<CreateDestinationCommandHandler>();
 builder.Services.AddScoped<RemoveDestinationCommandHandler>();
 builder.Services.AddScoped<UpdateDestinationCommandHandler>();
+
+builder.Services.AddScoped<GetFeatureQueryHandler>();
+builder.Services.AddScoped<GetFeatureByIdQueryHandler>();
+
+
+builder.Services.AddScoped<GetStepQueryHandler>();
 
 builder.Services.AddMediatR(cfg =>
 {
