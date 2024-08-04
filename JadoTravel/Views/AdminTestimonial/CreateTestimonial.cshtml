@@ -1,0 +1,27 @@
+﻿@model CreateTestimonialCommand
+@{
+	ViewData["Title"] = "CreateTestimonial";
+	Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid px-4">
+	<br />
+	<h2>Yeni Referans Ekleme Sayfası</h2>
+	<br />
+	<form method="post">
+		<label>Ad Soyad</label>
+		<input type="text" asp-for="NameSurname" class="form-control" />
+		<br />
+		<label>Açıklama</label>
+		<input type="text" asp-for="Description" class="form-control" />
+		<br />
+		<label>Konum</label>
+		<input type="text" asp-for="City" class="form-control" />
+		<br />
+		<label>Resim</label>
+		<input type="text" asp-for="ImageUrl" class="form-control" />
+		<br />
+		<button class="btn btn-primary">Kaydet</button>
+
+	</form>
+</div>

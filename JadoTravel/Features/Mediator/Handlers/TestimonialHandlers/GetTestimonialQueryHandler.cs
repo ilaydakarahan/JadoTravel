@@ -17,8 +17,8 @@ namespace JadoTravel.Features.Mediator.Handlers.TestimonialHandlers
 
 		public async Task<List<GetTestimonialQueryResult>> Handle(GetTestimonialQuery request, CancellationToken cancellationToken)
 		{
-			var values = await _context.Testimonials.OrderByDescending(x=>x.TestimonialId).Take(3).ToListAsync();
-
+			var values = await _context.Testimonials.ToListAsync();
+			//OrderByDescending(x=>x.TestimonialId).Take(3).
 			var testimonialList = (from x in values
 								   select new GetTestimonialQueryResult
 								   {
