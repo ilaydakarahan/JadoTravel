@@ -1,0 +1,20 @@
+﻿@model UpdateSubscribeCommand
+@{
+    ViewData["Title"] = "UpdateSubscribe";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid px-4">
+    <br />
+    <h2>Abone Bilgisi Güncelleme Sayfası</h2>
+    <br />
+    <form method="post">
+        <input type="hidden" asp-for="SubscribeId" />
+        <label>Abone Maili</label>
+        <input type="text" asp-for="Mail" class="form-control" />
+        <br />
+
+        <button class="btn mb-1 btn-rounded btn-info">Güncelle</button>
+    </form>
+</div>
+
