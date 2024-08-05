@@ -1,13 +1,13 @@
 ﻿@model UpdateDestinationCommand
 @{
     ViewData["Title"] = "UpdateDestination";
+	Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-
-
-<div class="container">
-	<h1>Tur Rotası Güncelleme Sayfası</h1>
-
+<div class="container-fluid px-4">
+	<br />
+	<h2>Tur Günceleme Sayfası</h2>
+	<br />
 	<form method="post">
 		<input type="hidden" asp-for="DestinationId" />
 		<label>Şehir</label>

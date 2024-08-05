@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Features\CQRS\Handlers\FeatureHandlers\UpdateFeatureCommandHandler.cs~RF5b338833.TMP" />
     <None Remove="Views\Default\Index.cshtml~RF4d59d384.TMP" />
   </ItemGroup>
 
