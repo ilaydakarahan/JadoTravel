@@ -1,0 +1,26 @@
+﻿@model UpdateStepCommand
+@{
+    ViewData["Title"] = "UpdateStep";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid px-4">
+	<br />
+	<h2>Adım Günceleme Sayfası</h2>
+	<br />
+	<form method="post">
+		<input type="hidden" asp-for="StepId" />
+		<label>Başlık</label>
+		<input type="text" asp-for="Title" class="form-control" />
+		<br />
+		<label>Açıklama </label>
+		<input type="text" asp-for="Description" class="form-control" />
+		<br />
+		<label>İkon</label>
+		<input type="text" asp-for="Icon" class="form-control" />
+		<br />
+		<button class="btn btn-primary">Güncelle</button>
+	</form>
+
+</div>
+

@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddDbContext<JadooContext>();
+
 builder.Services.AddScoped<GetDestinationQueryHandler>();
 builder.Services.AddScoped<GetDestinationByIdQueryHandler>();
 builder.Services.AddScoped<CreateDestinationCommandHandler>();
@@ -19,9 +20,14 @@ builder.Services.AddScoped<UpdateDestinationCommandHandler>();
 
 builder.Services.AddScoped<GetFeatureQueryHandler>();
 builder.Services.AddScoped<GetFeatureByIdQueryHandler>();
+builder.Services.AddScoped<UpdateFeatureCommandHandler>();
 
 
 builder.Services.AddScoped<GetStepQueryHandler>();
+builder.Services.AddScoped<GetStepByIdQueryHandler>();
+builder.Services.AddScoped<CreateStepCommandHandler>();
+builder.Services.AddScoped<RemoveStepCommandHandler>();
+builder.Services.AddScoped<UpdateStepCommandHandler>();
 
 builder.Services.AddMediatR(cfg =>
 {

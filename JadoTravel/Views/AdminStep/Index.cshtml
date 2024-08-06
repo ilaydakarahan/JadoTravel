@@ -1,0 +1,34 @@
+﻿@model List<GetStepQueryResult>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid px-4">
+	<br />
+	<table class="table table-bordered">
+		<tr>
+			<th>#</th>
+			<th>Başlık</th>
+			<th>Açıklama</th>
+			<th>İkon</th>
+			<th>Detay</th>
+		</tr>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<th>@item.StepId</th>
+				<td>@item.Title</td>
+				<td>@item.Description</td>
+				<td><img src="@item.Icon" style="height:100px;width:100px" /></td>
+				<td>
+					<a href="/AdminStep/DeleteStep/@item.StepId" class="btn mb-1 btn-rounded btn-warning">Sil</a>
+					<a href="/AdminStep/UpdateStep/@item.StepId" class="btn mb-1 btn-rounded btn-primary">Güncelle</a>
+				</td>
+			</tr>
+		}
+	</table>
+	<br />
+	<a href="/AdminStep/CreateStep" class="btn btn-primary">Yeni Adım Oluştur</a>
+</div>
+

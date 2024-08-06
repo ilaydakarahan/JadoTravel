@@ -16,7 +16,9 @@ namespace JadoTravel.Features.CQRS.Handlers.StepHandlers
 		public List<GetStepQueryResult> Handle()
 		{
 			var values = _repository.GetList();
+
 			List<GetStepQueryResult> result = (from x in values
+
 											   select new GetStepQueryResult
 											   {
 												   Description = x.Description,
