@@ -8,16 +8,16 @@ namespace JadoTravel.ViewComponents.Default
 {
     public class _DefaultDestinationComponent : ViewComponent
     {
-		private readonly GetDestinationQueryHandler _getDestinationQueryHandler;
+		private readonly GetDestinationHomeQueryHandler _getDestinationHomeQueryHandler;
 
-		public _DefaultDestinationComponent(GetDestinationQueryHandler getDestinationQueryHandler)
+		public _DefaultDestinationComponent(GetDestinationHomeQueryHandler getDestinationHomeQueryHandler)
 		{
-			_getDestinationQueryHandler = getDestinationQueryHandler;
+			_getDestinationHomeQueryHandler = getDestinationHomeQueryHandler;
 		}
 
 		public IViewComponentResult Invoke()
         {
-			var values = _getDestinationQueryHandler.Handle();
+			var values = _getDestinationHomeQueryHandler.Handle();
 			return View(values);
 		}
     }
